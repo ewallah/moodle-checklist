@@ -116,6 +116,6 @@ jobs:
 
       - name: xmldb
         if: ${{ always() }}
-        run: php admin/tool/behat/cli/run.php --profile chrome --tags=@tool_xmldb
+        run: php admin/tool/behat/cli/run.php --profile="chrome" --tags="@tool_xmldb"
         working-directory: moodle
 
