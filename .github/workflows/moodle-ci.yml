@@ -113,3 +113,9 @@ jobs:
       - name: Behat features
         if: ${{ always() }}
         run: moodle-plugin-ci behat --profile chrome
+
+      - name: xmldb
+        if: ${{ always() }}
+        run: php admin/tool/behat/cli/run.php --profile chrome --tags=@tool_xmldb
+        working-directory: moodle
+
